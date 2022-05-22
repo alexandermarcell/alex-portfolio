@@ -50,9 +50,11 @@
         flex-direction: column;
         box-sizing: border-box;
         justify-content: flex-start;
+        border-bottom: 0.5px solid lightgray;
 
         @include desktop{
             padding-left: 2rem;
+            border-bottom: none;
         }
     }
 
