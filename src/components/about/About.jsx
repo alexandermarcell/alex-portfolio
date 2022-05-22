@@ -13,7 +13,7 @@ const About = () => {
         e.preventDefault();
 
         axios({
-            url:'http://localhost:5505/api/v1/download/',
+            url:'https://alex-portfolio-server.herokuapp.com/api/v1/download/',
             method:"GET",
             responseType:"blob"
         })

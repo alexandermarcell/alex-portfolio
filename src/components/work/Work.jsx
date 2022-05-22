@@ -8,7 +8,7 @@ function Work() {
   useEffect(() => {
     async function getProjects(){
       const response = await axios
-      .get('http://localhost:5505/api/v1/projects/');
+      .get('https://alex-portfolio-server.herokuapp.com/api/v1/projects/');
       setProjects(response.data)
     };
     getProjects();
