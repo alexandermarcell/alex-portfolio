@@ -1,0 +1,206 @@
+@use '../../styles/_partials/mixins' as *;
+@use '../../styles/_partials/reset';
+
+.about {
+    width: 100%;
+    display: flex;
+    margin: 0 auto;
+    max-width: 1440px;
+    flex-direction: column;
+    box-sizing: border-box;
+
+    @include desktop {
+        width: 100%;
+        height: 67vh;
+    }
+
+    &__wrap {
+        width: 100%;
+        box-sizing: border-box;
+
+        @include desktop {
+            display: flex;
+            margin: 0 auto;
+            flex-wrap: nowrap;
+            max-width: 1280px;
+            flex-direction: row;
+        }
+    }
+
+    &__pageheader {
+        width: 100%;
+        font-size: 3rem;
+        font-weight: 700;
+        margin-bottom: 2rem;
+    }
+
+    &__pic1 {
+        width: 100%;
+        display: flex;
+        padding: 1rem;
+        max-width: 500px;
+        border-radius: 20px;
+        margin-bottom: 1rem;
+        box-sizing: border-box;
+
+        @include desktop {
+            display: none;
+        }
+    }
+
+    &__pic2 {
+        display: none;
+
+        @include desktop {
+            width: 100%;
+            display: flex;
+            max-width: 475px;
+            border-radius: 20px;
+            margin-right: 3rem;
+        }
+    }
+
+    &__main {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        box-sizing: border-box;
+        flex-direction: column;
+
+        @include desktop {
+            width: 100%;
+            display: flex;
+        }
+    }
+
+    &__container{
+        width: 100%;
+        display: flex;
+        margin: 0 auto;
+        max-width: 500px;
+        flex-direction: column;
+        box-sizing: border-box;
+        justify-content: center;
+
+        @include tablet {
+            width: 100%;
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            justify-content: center;
+        }
+    }
+
+    &__intro {
+        width: 100%;
+        max-width: 800px;
+        font-weight: 600;
+        font-size: 1.2rem;
+        box-sizing: border-box;
+
+        @include tablet {
+            font-size: 1.5rem;
+            font-weight: 600;
+        }
+
+        @include desktop {
+            padding: 1.2rem;
+            font-size: 2rem;
+            font-weight: 600;
+            max-width: 800px;
+        }
+    }
+
+    &__bio {
+        max-width: 600px;
+        font-size: 12px;
+        box-sizing: border-box;
+        padding: 0.5rem; 
+
+        @include tablet {
+            font-size: 1.15rem;
+        }
+
+        @include desktop {
+            font-size: 1.25rem;
+        }
+    }
+
+    &__technical {
+        width: 100%;
+        display: flex;
+        padding: 0.5rem;
+        align-items: center;
+        box-sizing: border-box;
+        flex-direction: column;
+
+        @include desktop {
+            max-width: 800px;
+            margin-right: 3rem;
+        }
+    }
+
+    &__socials {
+        display: flex;
+        margin-top: 1.5rem;
+        align-items: center;
+        flex-direction: column;
+        justify-content: center;
+
+        @include tablet {
+            width: 100%;
+            display: flex;
+            max-width: 800px;
+            flex-wrap: wrap;
+            flex-direction: row;
+            box-sizing: border-box;
+        }
+    }
+
+
+    &__info{
+        margin: 1rem;
+        width: 250px;
+        color: white;
+        cursor: pointer;
+        padding: 14px 0;
+        font-size: 1.2rem;
+        position: relative;
+        border-radius: 20px;
+        border: 0.5px solid rgb(112, 112, 112);
+        box-shadow: rgba(0, 0, 0, 0.3) 0px 3px 8px;
+        background-color: rgba(165, 164, 236, 0.746);
+    }
+
+    &__info:active {
+        transform: translateY(3px);
+    }
+
+    &__icons1 {
+        top: 8px;
+        left: 12px;
+        height: 30px;
+        position: absolute;
+    }
+
+    &__icons2 {
+        top: 7px;
+        left: 12px;
+        height: 35px;
+        position: absolute;
+    }
+
+    &__icons3 {
+        top: 12px;
+        left: 18px;
+        height: 20px;
+        position: absolute;
+    }
+
+    &__icons4 {
+        top: 12px;
+        left: 18px;
+        height: 25px;
+        position: absolute;
+    }
+}
