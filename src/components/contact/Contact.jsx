@@ -20,7 +20,7 @@ function Contact() {
     console.log(name, email, message)
 
     axios
-      .post('https://alex-portfolio-server.herokuapp.com/api/v1/messages', {
+      .post('https://alex-portfolio-server.herokuapp.com/api/v1/messages/', {
         name,
         email,
         message,
