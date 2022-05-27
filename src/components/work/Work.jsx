@@ -24,7 +24,7 @@ function Work() {
             {projects.map((project) => {
               return(
                 <div className='work__project' key={project.id}>
-                  <img src={project.image} alt='' className="work__image" onClick={() => window.open(project.link)} />
+                  <img src={project.image} alt='' className="work__image" onClick={() => window.open(project.link, '_blank')} />
                   <h2 className="work__projectName">
                     {project.title}</h2>
                   <p className="work__info">
