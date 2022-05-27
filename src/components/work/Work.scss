@@ -34,6 +34,10 @@
         }
     }
 
+    &__link {
+        text-decoration: none;
+    }
+
     &__header{
         width: 100%;
         display: flex;
@@ -137,9 +141,5 @@
         font-size: 1rem;
         margin-top: 0.25rem;
         text-align: left;
-    }
-
-    &__link {
-        text-decoration: none;
     }
 }

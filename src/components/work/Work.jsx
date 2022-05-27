@@ -14,6 +14,15 @@ function Work() {
     getProjects();
   },[]);
 
+  const openInNewTab = (url) => {
+    const newWindow = window.open(url, '_blank', 'noopener,noreferrer')
+    if (newWindow) newWindow.opener = null
+  }
+
+  const onClickUrl = (url) => {
+    return () => openInNewTab(url)
+  }  
+
   return (
     <div className='work'>
       <div className="work__wrap">
@@ -23,17 +32,14 @@ function Work() {
           <div className="work__cardbody">
             {projects.map((project) => {
               return(
-                <div className='work__project' key={project.id}>
-                  <a target="_blank" rel='noreferrer' 
-                  className='work__link' href={project.link}>
-                    <img src={project.image} alt='' className="work__image" />
-                    <h2 className="work__projectName">
-                      {project.title}</h2>
-                    <p className="work__info">
-                      {project.stack}</p>
-                    <p className="work__info">
-                      {project.synopsis}</p>
-                  </a>
+                <div className='work__project' onClick={onClickUrl(project.link)} key={project.id}>
+                  <img src={project.image} alt='' className="work__image" />
+                  <h2 className="work__projectName">
+                    {project.title}</h2>
+                  <p className="work__info">
+                    {project.stack}</p>
+                  <p className="work__info">
+                    {project.synopsis}</p>
                 </div>
               )
             })}
