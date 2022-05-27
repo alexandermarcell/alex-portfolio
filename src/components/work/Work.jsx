@@ -40,6 +40,7 @@ function Work() {
                     {project.stack}</p>
                   <p className="work__info">
                     {project.synopsis}</p>
+                    {project.link}
                 </div>
               )
             })}
