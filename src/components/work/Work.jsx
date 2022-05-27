@@ -24,7 +24,8 @@ function Work() {
             {projects.map((project) => {
               return(
                 <div className='work__project' key={project.id}>
-                  <a href={project.link}>
+                  <a target="_blank" rel='noreferrer' 
+                  className='work__link' href={project.link}>
                     <img src={project.image} alt='' className="work__image" />
                     <h2 className="work__projectName">
                       {project.title}</h2>
