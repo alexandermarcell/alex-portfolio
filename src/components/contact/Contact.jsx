@@ -4,8 +4,12 @@ import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 
 
-import { FaMobileAlt } from 'react-icons/fa';
-import { MdOutlineEmail } from 'react-icons/md';
+import Resume from "../../assets/Icons/resume.png";
+import FileDownload from 'js-file-download';
+import GitHub from '../../assets/Icons/github.png';
+import Gmail from '../../assets/Icons/gmail-logo.svg';
+import LinkedIn from '../../assets/Icons/linkedin-circled.svg';
+
 
 function Contact() {
   const navigate = useNavigate();
@@ -34,13 +38,26 @@ function Contact() {
     navigate("/");
   }
 
+  const download = (e) => {
+    e.preventDefault();
+
+    axios({
+        url:'https://alex-portfolio-server.herokuapp.com/api/v1/download/',
+        method:"GET",
+        responseType:"blob"
+    })
+    .then((res) => {
+        FileDownload(res.data, 'AlexMarcellResume.pdf')
+    })
+  }
+
   return (
     <section className="contact">
       <section className="contact__wrap">
         <article className="contact__body">
           <div className="contact__text">
             <h1 className="contact__page-heading">
-              Contact Me 
+              Connect With Me 
             </h1>
             <p className='contact__subhead'>
               Want to send me a message? 
@@ -49,16 +66,26 @@ function Contact() {
               I'd love to hear from you! 
             </p>
             <p className="contact__subhead">
-              Fill out the form bellow.
+              Fill out the form.
             </p>
           </div>
-          <div className="contact__contacts">
-            <p className="contact__mobile">
-              <FaMobileAlt className='contact__icon'/> M: 646-667-5247
-            </p>
-            <p className="contact__email">
-              <MdOutlineEmail className='contact__icon'/> E: thealexmarcell@gmail.com
-            </p>
+          <div className="contact__socials">
+            <button className='contact__info' onClick={() => window.open('https://github.com/alexandermarcell')}>
+                <img className='contact__icons1' src={GitHub} alt="github icon" />
+                GitHub
+            </button>
+            <button className='contact__info' onClick={() => window.open('https://www.linkedin.com/in/alex-marcell/')}>
+                <img className='contact__icons2' src={LinkedIn} alt="linkedin icon" />
+                LinkedIn
+            </button>
+            <button className='contact__info' onClick={() => window.location = 'mailto:thealexmarcell@gmail.com'}>
+                <img src={Gmail} alt="mail icons3" className="contact__icons3" />
+                Gmail
+            </button>
+            <button className="contact__info" onClick={(e) => download(e)}>
+                <img className="contact__icons4" src={Resume} alt="" />
+                My Resume
+            </button>
           </div>
         </article>
         <form onSubmit={handleSubmit} className="contact__form">

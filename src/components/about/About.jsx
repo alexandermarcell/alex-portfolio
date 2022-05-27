@@ -1,26 +1,7 @@
 import './About.scss';
-import axios from 'axios';
-import Resume from "../../assets/Icons/resume.png";
-import FileDownload from 'js-file-download';
 import MyPic from '../../assets/image/myPhoto.png';
-import GitHub from '../../assets/Icons/github.png';
-import Gmail from '../../assets/Icons/gmail-logo.svg';
-import LinkedIn from '../../assets/Icons/linkedin-circled.svg';
 
 const About = () => {
-
-    const download = (e) => {
-        e.preventDefault();
-
-        axios({
-            url:'https://alex-portfolio-server.herokuapp.com/api/v1/download/',
-            method:"GET",
-            responseType:"blob"
-        })
-        .then((res) => {
-            FileDownload(res.data, 'AlexMarcellResume.pdf')
-        })
-    }
 
   return (
     <div className='about'>
@@ -49,7 +30,7 @@ const About = () => {
                         experience working with a variety of other languages such as Express and Node.
                     </li>
                 </ul>
-                <div className="about__socials">
+                {/* <div className="about__socials">
                     <button className='about__info' onClick={() => window.open('https://github.com/alexandermarcell')}>
                         <img className='about__icons1' src={GitHub} alt="github icon" />
                         GitHub
@@ -66,7 +47,7 @@ const About = () => {
                         <img className="about__icons4" src={Resume} alt="" />
                         My Resume
                     </button>
-                </div>
+                </div> */}
             </div>
             <img src={MyPic} className='about__pic2' alt='me in bio' />
         </div>
