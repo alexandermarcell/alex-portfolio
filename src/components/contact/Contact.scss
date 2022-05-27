@@ -7,12 +7,7 @@
     flex-direction: column;
     box-sizing: border-box;
 
-    @include tablet{
-        height: 66vh;
-    }
-
     @include desktop {
-        height: 67vh;
         margin: 0 auto;
         max-width: 1440px;
     }
