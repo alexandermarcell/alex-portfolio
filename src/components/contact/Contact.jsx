@@ -60,10 +60,7 @@ function Contact() {
               Connect With Me 
             </h1>
             <p className='contact__subhead'>
-              Want to send me a message? 
-            </p>
-            <p className="contact__subhead">
-              I'd love to hear from you! 
+              Send me a message, I'd love to hear from you! 
             </p>
             <p className="contact__subhead">
               Fill out the form.
