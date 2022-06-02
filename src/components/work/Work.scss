@@ -48,7 +48,7 @@
         justify-content: center;
 
         @include desktop {
-            font-size: 4rem;
+            font-size: 2.75rem;
             justify-content: flex-start;
         }
     }
@@ -89,6 +89,7 @@
             display: flex;
             flex-wrap: wrap;
             flex-direction: row;
+            justify-content: center;
         }
 
         @include desktop {
@@ -112,6 +113,12 @@
         box-sizing: border-box;
 
         @include tablet{
+            max-width: 300px;
+        }
+
+        @include desktop {
+            width: 100%;
+            min-width: 275px;
             max-width: 350px;
         }
     }

@@ -10,19 +10,18 @@
 
     &__wrap {
         width: 100%;
-        padding: 1rem;
+        padding: 0.5rem;
         position: relative;
         list-style-type: none;
         box-sizing: border-box;
     }
 
-    &__ex{
-        position: absolute;
-        top: 0;
-        right: 0;
-        color: #ffffff;
-        font-size: 1.5rem;
-    }
+   &__hamburger {
+       display: flex;
+       align-items: flex-end;
+       padding-right: 0.3rem;
+       flex-direction: column;
+   }
 
     &__items {
         width: 100%;
@@ -39,7 +38,6 @@
     }
 
     &__link {
-        width: 30%;
         display: flex;
         color: white;
         margin: 0 auto;

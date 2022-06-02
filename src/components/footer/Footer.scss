@@ -32,6 +32,12 @@
         }
     }
 
+    &__link {
+        cursor: pointer;
+        color: #ffffff;
+        text-decoration: none;
+    }
+
     &__body {
         width: 100%;
         padding: 2rem;

@@ -3,19 +3,36 @@
 
 .nav {
     width: 100%;
+    height: 60px;
     display: flex;
+    padding: 0 1rem;
     flex-direction: column;
     box-sizing: border-box;
+    justify-content: center;
 
     &__wrap {
         width: 100%;
         display: flex;
         position: relative;
         align-items: center;
+        justify-content: space-between;
+    }
+
+    &__logo {
+        width: 100%;
+        min-width: 150px;
+        max-width: 200px;
+    }
+
+    &__nav-content {
+        width: 100%;
+        display: flex;
+        box-sizing: border-box;
         justify-content: flex-end;
     }
 
-    &__smalldevice-view{
+    &__handhelds{
+        width: 100%;
         display: flex;
         position: relative;
         justify-content: flex-end;
@@ -25,30 +42,25 @@
         }
     }
 
+    &__hamburger {
+        color: #ffffff;
+    }
+
     &__window {
-        width: 100vw;
+        top: -6px;
+        right: -15px;
+        width: 100%;
         height: 100vh;
         z-index: 1000;
-        padding: 1rem;
+        min-width: 250px;
+        max-width: 475px;
         position: absolute;
         background-color: rgb(165, 164, 236);
-    }
 
-    &__ex {
-        position: abosute;
-        top: 0;
-        right: 0;
-        margin: 0;
-        padding: 0;
-        right: 50%;
-        font-size: 2rem;
-        color: #ffffff;
-    }
-
-    &__hamburger:active {
-        z-index: 1001;
-        color: #ffffff;
-        position: absolute;
+        @include tablet {
+            top: -12%;
+            right: -3.5%;
+        }
     }
 
     &__desktop-view {
@@ -56,6 +68,7 @@
 
         @include desktop {
             display: flex;
+            justify-content: flex-end;
         }
     }
 
@@ -66,8 +79,9 @@
 
     &__items {
         cursor: pointer;
-        font-size: 1.5rem;
-        margin-left: 1rem;
+        font-size: 1rem;
+        font-style: italic;
+        margin-left: 1.2rem;
     }
 
     &__items:active {

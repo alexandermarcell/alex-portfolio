@@ -9,53 +9,17 @@
     flex-direction: column;
     box-sizing: border-box;
 
-    @include desktop {
-        width: 100%;
-    }
-
     &__wrap {
         width: 100%;
         box-sizing: border-box;
 
         @include desktop {
             display: flex;
+            height: 900px;
             margin: 0 auto;
             flex-wrap: nowrap;
             max-width: 1280px;
             flex-direction: row;
-        }
-    }
-
-    &__pageheader {
-        width: 100%;
-        font-size: 3rem;
-        font-weight: 700;
-        margin-bottom: 2rem;
-    }
-
-    &__pic1 {
-        width: 100%;
-        display: flex;
-        padding: 1rem;
-        max-width: 500px;
-        border-radius: 20px;
-        margin-bottom: 1rem;
-        box-sizing: border-box;
-
-        @include desktop {
-            display: none;
-        }
-    }
-
-    &__pic2 {
-        display: none;
-
-        @include desktop {
-            width: 100%;
-            display: flex;
-            max-width: 475px;
-            border-radius: 20px;
-            margin-right: 3rem;
         }
     }
 
@@ -72,11 +36,43 @@
         }
     }
 
+    &__pageheader {
+        width: 100%;
+        font-size: 2.5rem;
+        font-weight: 700;
+        margin-bottom: 1rem;
+    }
+
+    &__pic1 {
+        width: 100%;
+        display: flex;
+        padding: 1rem;
+        max-width: 475px;
+        border-radius: 10%;
+        margin-bottom: 1rem;
+        box-sizing: border-box;
+
+        @include desktop {
+            display: none;
+        }
+    }
+
+    &__pic2 {
+        display: none;
+
+        @include desktop {
+            width: 100%;
+            display: flex;
+            max-width: 350px;
+            border-radius: 20px;
+        }
+    }
+
     &__container{
         width: 100%;
         display: flex;
         margin: 0 auto;
-        max-width: 500px;
+        max-width: 450px;
         flex-direction: column;
         box-sizing: border-box;
         justify-content: center;
@@ -92,7 +88,6 @@
 
     &__intro {
         width: 100%;
-        max-width: 800px;
         font-weight: 600;
         font-size: 1.2rem;
         box-sizing: border-box;
@@ -103,25 +98,20 @@
         }
 
         @include desktop {
-            padding: 1.2rem;
-            font-size: 2rem;
+            padding: 1rem;
+            font-size: 1.75rem;
             font-weight: 600;
-            max-width: 800px;
         }
     }
 
     &__bio {
-        max-width: 600px;
+        padding: 0.5rem;
         font-size: 12px;
+        max-width: 600px;
         box-sizing: border-box;
-        padding: 0.5rem; 
 
         @include tablet {
-            font-size: 1.15rem;
-        }
-
-        @include desktop {
-            font-size: 1.25rem;
+            font-size: 1rem;
         }
     }
 
@@ -137,5 +127,60 @@
             max-width: 800px;
             margin-right: 3rem;
         }
+    }
+
+    &__skills{
+        width: 100%;
+        display: flex;
+        max-width: 500px;
+        margin: 2rem auto;
+        flex-direction: column;
+        box-sizing: border-box;
+        justify-content: center;
+    }
+    
+    &__gallery{
+        width: 500px;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        flex-direction: row;
+    }
+
+    &__title{
+        font-size: 1.2rem;
+        padding: 1rem 0;
+    }
+
+    &__front-end {
+        display: flex;
+        margin: 1rem 0;
+        flex-wrap: wrap;
+        align-items: center;
+    }
+
+    &__back-end {
+        display: flex;
+        margin: 1rem 0;
+        flex-wrap: wrap;
+        align-items: center;
+    }
+
+    &__icon {
+        height: 50px;
+        margin: 0 0.5rem;
+    }
+
+    &__icon1{
+        width: 125px;
+        margin: 0 0.5rem;
+    }
+
+    &__pic-container {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        box-sizing: border-box;
+        flex-direction: column;
     }
 }

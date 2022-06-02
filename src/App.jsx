@@ -1,11 +1,11 @@
 import './App.scss';
-import Header from './components/header/Header';
 import Footer from './components/footer/Footer';
 import {
   BrowserRouter as Router,
   Routes,
   Route,
 } from "react-router-dom";
+import Navigation from './components/navigation/Navigation';
 import About from './components/about/About';
 import Work from './components/work/Work';
 import Contact from './components/contact/Contact';
@@ -15,7 +15,7 @@ function App() {
   return (
     <div className="App">
       <Router>
-        <Header />
+        <Navigation />
         <Layout>
           <Routes>
             <Route path='/' element={<Work/>} />

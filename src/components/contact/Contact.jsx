@@ -1,8 +1,8 @@
 import './Contact.scss';
 import axios from 'axios';
 import { useState } from 'react';
+import emailjs from 'emailjs-com'
 import { useNavigate } from 'react-router-dom';
-
 
 import Resume from "../../assets/Icons/resume.png";
 import FileDownload from 'js-file-download';
@@ -17,26 +17,7 @@ function Contact() {
   const [ name, setName ] = useState('');
   const [ email, setEmail ] = useState('');
   const [ message, setMessage ] = useState('');
-  
-  const handleSubmit = (e) => {
-    e.preventDefault();
 
-    console.log(name, email, message)
-
-    axios
-      .post('https://alex-portfolio-server.herokuapp.com/api/v1/messages/', {
-        name,
-        email,
-        message,
-      }).then((response) => {
-        console.log(response)
-      })
-      .catch((error) => {
-        console.log('There was an error: ', error)
-      })
-    
-    navigate("/");
-  }
 
   const download = (e) => {
     e.preventDefault();
@@ -51,6 +32,18 @@ function Contact() {
     })
   }
 
+  function sendEmail(e) {
+    e.preventDefault();
+
+    emailjs.sendForm('service_cshbo9b', 'template_b3181om', e.target, 'vh3TBm5FAk2l0lQFv')
+      .then((result) => {
+          console.log(result.text);
+      }, (error) => {
+          console.log(error.text);
+      });
+    navigate("/");
+  };
+
   return (
     <section className="contact">
       <section className="contact__wrap">
@@ -59,11 +52,8 @@ function Contact() {
             <h1 className="contact__page-heading">
               Connect With Me 
             </h1>
-            <p className='contact__subhead'>
-              Send me a message, I'd love to hear from you! 
-            </p>
-            <p className="contact__subhead">
-              Fill out the form.
+            <p className="contact__words">
+              Click the link bellow or fill out the form to send me a message
             </p>
           </div>
           <div className="contact__socials">
@@ -84,21 +74,27 @@ function Contact() {
                 My Resume
             </button>
           </div>
+          <h3 className='contact__subhead1'>
+            Send me a message, I'd love to hear from you! 
+          </h3>
+          <h4 className="contact__subhead2">
+            Fill out the form.
+          </h4>
         </article>
-        <form onSubmit={handleSubmit} className="contact__form">
+        <form onSubmit={sendEmail} className="contact__form">
           <div className="contact__compartment">
             <label className="contact__label">Name:
               <input type="name" placeholder='Name' 
-              className="contact__input" value={name}
+              className="contact__input" name='name' value={name}
               onChange={(e) => setName(e.target.value)}/>
             </label>
             <label className="contact__label">Email:
               <input type="email" placeholder='Email' 
-              className="contact__input" value={email} 
+              className="contact__input" name='email' value={email} 
               onChange={(e) => setEmail(e.target.value)} />
             </label>
             <label className="contact__label">Message:
-              <textarea type="message" placeholder='Message...'  
+              <textarea type="message" name='message' placeholder='Message...'  
               className='contact__textarea' value={message}
               onChange={(e) => setMessage(e.target.value)} />
             </label>

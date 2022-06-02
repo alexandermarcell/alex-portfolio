@@ -1,4 +1,6 @@
 import './Footer.scss';
+import { Link } from 'react-router-dom';
+
 
 function Footer() {
   return (
@@ -8,8 +10,10 @@ function Footer() {
               I am open to take on freelance opportunities.
             </h2>
            <p className="footer__body">
+             <Link className='footer__link' to={'/contact'} >
               Have an exciting project or opportunity? 
               Send me a message
+              </Link>
             </p> 
         </div>
     </div>

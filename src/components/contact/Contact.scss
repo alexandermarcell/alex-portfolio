@@ -2,6 +2,7 @@
 
 .contact {
     width: 100%;
+    height: 900px;
     display: flex;
     padding: 0.25rem;
     flex-direction: column;
@@ -21,9 +22,8 @@
         flex-direction: column;
 
         @include desktop {
-            height: 63vh;
+            height: 100%;
             display: flex;
-            padding: 3rem;
             flex-direction: row;
             box-sizing: border-box;
         }
@@ -40,14 +40,12 @@
         width: 100%;
         display: flex;
         margin: 0 auto;
-        padding: 0 1rem;
-        margin: 2rem 1rem 1rem;
+        padding: 0.5rem;
         flex-direction: column;
         box-sizing: border-box;
         justify-content: flex-start;
 
         @include desktop{
-            padding-left: 2rem;
             border-bottom: none;
         }
     }
@@ -55,9 +53,9 @@
     &__text {
         width: 100%;
         display: flex;
+        max-width: 800px;
         flex-direction: column;
         box-sizing: border-box;
-        justify-content: flex-start;
 
         @include desktop {
             padding-left: 3rem;
@@ -71,25 +69,63 @@
         font-weight: 600;
         font-style: italic;
         margin: 0 auto 2rem;
+        flex-direction: column;
         box-sizing: border-box;
 
+        @include tablet {
+            justify-content: center;
+        }
+
         @include desktop {
-            font-size: 4rem;
+            display: flex;
+            font-size: 2.25rem;
+            flex-direction: row;
             justify-content: flex-start;
         }
     }
 
-    &__subhead {
+    &__words {
+        display: none;
+
+        @include desktop {
+            display: flex;
+            width: 500px;
+            font-weight: 600;
+            font-size: 1.2rem;
+            text-align: left;
+        }
+    }
+
+    &__subhead1 {
         width: 100%;
         display: flex;
-        line-height: 30px;
-        max-width: 500px;
-        text-align: left;
-        font-size: 1.2rem;
         font-weight: 600;
+        line-height: 30px;
+        font-size: 1rem;
+        justify-content: center;
 
         @include tablet{
-            font-size: 1.5rem;
+            display: flex;
+            justify-content: center;
+            font-size: 1.25rem;
+        }
+
+        @include desktop {
+            display: none;
+        }
+    }
+    &__subhead2 {
+        width: 100%;
+        font-weight: 600;
+        line-height: 30px;
+        font-size: 1rem;
+
+        @include tablet{
+            font-size: 1.25rem;
+        }
+
+        @include desktop {
+            display: none;
         }
     }
 
@@ -103,7 +139,7 @@
 
     &__form {
         width: 100%;
-        padding: 2rem;
+        padding: 1rem;
         display: flex;
         margin: 0 auto;
         border-radius: 20px;
@@ -111,6 +147,7 @@
         box-sizing: border-box;
 
         @include desktop{
+            padding: 1rem;
             border-radius: 0;
         }
     }
@@ -180,6 +217,7 @@
         margin-left: 0;
         padding-left: 0;
         align-items: center;
+        margin-bottom: 2rem;
         flex-direction: column;
         justify-content: center;
         box-sizing: border-box;
@@ -194,79 +232,16 @@
         }
 
         @include desktop {
-            margin-top: 1.5rem;
-            padding-top: 3.5rem;
-        }
-    }
-
-
-    &__info{
-        margin-right: 1rem;
-        width: 250px;
-        color: white;
-        cursor: pointer;
-        padding: 14px 0;
-        font-size: 1.2rem;
-        position: relative;
-        border-radius: 20px;
-        border: 0.5px solid rgb(112, 112, 112);
-        box-shadow: rgba(0, 0, 0, 0.3) 0px 3px 8px;
-        background-color: #A6B1E1;
-    }
-
-    &__info:active {
-        transform: translateY(3px);
-    }
-
-    &__icons1 {
-        top: 8px;
-        left: 12px;
-        height: 30px;
-        position: absolute;
-    }
-
-    &__icons2 {
-        top: 7px;
-        left: 12px;
-        height: 35px;
-        position: absolute;
-    }
-
-    &__icons3 {
-        top: 12px;
-        left: 18px;
-        height: 20px;
-        position: absolute;
-    }
-
-    &__icons4 {
-        top: 12px;
-        left: 18px;
-        height: 25px;
-        position: absolute;
-    }
-
-    &__socials {
-        display: flex;
-        margin-top: 1.5rem;
-        align-items: center;
-        flex-direction: column;
-        justify-content: center;
-
-        @include tablet {
-            width: 100%;
             display: flex;
-            max-width: 800px;
-            flex-wrap: wrap;
-            flex-direction: row;
-            box-sizing: border-box;
+            margin: 2rem;
+            justify-content: flex-start;
         }
     }
 
 
     &__info{
         margin: 1rem;
-        width: 250px;
+        width: 225px;
         color: white;
         cursor: pointer;
         padding: 14px 0;
@@ -276,7 +251,12 @@
         border: 0.5px solid rgb(112, 112, 112);
         box-shadow: rgba(0, 0, 0, 0.3) 0px 3px 8px;
         background-color: #A6B1E1;
+
+        @include desktop {
+            width: 200px;
+        }
     }
+
 
     &__info:active {
         transform: translateY(3px);
@@ -308,5 +288,5 @@
         left: 18px;
         height: 25px;
         position: absolute;
-     }
+    }
 }
