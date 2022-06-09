@@ -6,14 +6,14 @@
     width: 100%;
     display: flex;
     max-width: 1440px;
+    align-items: center;
+    background-size: cover;
     box-sizing: border-box;
-    background-image: linear-gradient(rgba(0,0,0,0.2),rgba(0,0,0,0.2)),url('../../assets/image/morgan-codes-wallpaper.png');
+    flex-direction: column;
+    mix-blend-mode: overlay;
     background-position: center;
     background-repeat: no-repeat;
-    background-size: cover;
-    align-items: center;
-    mix-blend-mode: overlay;
-    flex-direction: column;
+    background-image: url('../../assets/image/morgan-codes-wallpaper.png');
 
     &__wrap {
         width: 100%;
