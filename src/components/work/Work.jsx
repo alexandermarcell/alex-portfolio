@@ -24,10 +24,9 @@ function Work() {
   }  
 
   return (
-    <div className='work'>
+    <div className='work' id='work'>
       <div className="work__wrap">
-        <h2 className="work__header">Hi. I'm Alexander,</h2> 
-        <h2 className='work__header'>A Web Developer.</h2>
+        <h2 className='work__header'>My Work</h2>
         <div className="work__cards">
           <div className="work__cardbody">
             {projects.map((project) => {

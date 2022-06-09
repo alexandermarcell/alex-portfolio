@@ -1,30 +1,20 @@
 import './App.scss';
-import Footer from './components/footer/Footer';
-import {
-  BrowserRouter as Router,
-  Routes,
-  Route,
-} from "react-router-dom";
-import Navigation from './components/navigation/Navigation';
-import About from './components/about/About';
+import Hero from './components/hero/Hero';
 import Work from './components/work/Work';
+import About from './components/about/About';
+import Footer from './components/footer/Footer';
 import Contact from './components/contact/Contact';
-import Layout from './components/layout/Layout';
+import Navigation from './components/navigation/Navigation';
 
 function App() {
   return (
     <div className="App">
-      <Router>
-        <Navigation />
-        <Layout>
-          <Routes>
-            <Route path='/' element={<Work/>} />
-            <Route path='/about' element={<About/>} />
-            <Route path='/contact' element={<Contact/>} />
-          </Routes>
-        </Layout>
-        <Footer />
-      </Router>
+      <Navigation />
+      <Hero />
+      <About />
+      <Work />
+      <Contact />
+      <Footer />
     </div>
   );
 }

@@ -1,16 +1,19 @@
 @import '../../styles/_partials/mixins';
+@import '../../styles/_partials/variables';
 
 .contact {
     width: 100%;
-    height: 900px;
     display: flex;
-    padding: 0.25rem;
+    padding: 3rem 0;
     flex-direction: column;
     box-sizing: border-box;
+    background-color: #F4EEFF;
 
     @include desktop {
+        display: flex;
         margin: 0 auto;
         max-width: 1440px;
+        align-items: center;
     }
 
 
@@ -24,51 +27,35 @@
         @include desktop {
             height: 100%;
             display: flex;
-            flex-direction: row;
             box-sizing: border-box;
         }
-    }
-
-    &__pageHeader {
-        display: flex;
-        flex-direction: column;
-        box-sizing: border-box;
-        justify-content: flex-start;
     }
 
     &__body {
         width: 100%;
         display: flex;
-        margin: 0 auto;
-        padding: 0.5rem;
+        padding: 1rem;
+        align-items: center;
         flex-direction: column;
         box-sizing: border-box;
-        justify-content: flex-start;
-
-        @include desktop{
-            border-bottom: none;
-        }
     }
 
     &__text {
         width: 100%;
         display: flex;
-        max-width: 800px;
+        align-items: center;
         flex-direction: column;
         box-sizing: border-box;
-
-        @include desktop {
-            padding-left: 3rem;
-        }
     }
 
     &__page-heading {
         width: 100%;
         display: flex;
+        margin: 1rem 0;
         font-size: 2rem;
         font-weight: 600;
         font-style: italic;
-        margin: 0 auto 2rem;
+        align-items: center;
         flex-direction: column;
         box-sizing: border-box;
 
@@ -80,24 +67,11 @@
             display: flex;
             font-size: 2.25rem;
             flex-direction: row;
-            justify-content: flex-start;
-        }
-    }
-
-    &__words {
-        display: none;
-
-        @include desktop {
-            display: flex;
-            width: 500px;
-            font-weight: 600;
-            font-size: 1.2rem;
-            text-align: left;
         }
     }
 
     &__subhead1 {
-        width: 100%;
+        width: 400px;
         display: flex;
         font-weight: 600;
         line-height: 30px;
@@ -109,13 +83,9 @@
             justify-content: center;
             font-size: 1.25rem;
         }
-
-        @include desktop {
-            display: none;
-        }
     }
     &__subhead2 {
-        width: 100%;
+        width: 400px;
         font-weight: 600;
         line-height: 30px;
         font-size: 1rem;
@@ -123,18 +93,6 @@
         @include tablet{
             font-size: 1.25rem;
         }
-
-        @include desktop {
-            display: none;
-        }
-    }
-
-    &__contacts {
-        width: 100%;
-        display: flex;
-        margin: 3rem 0;
-        flex-direction: column;
-        align-items: flex-start;
     }
 
     &__form {
@@ -147,6 +105,7 @@
         box-sizing: border-box;
 
         @include desktop{
+            width: 700px;
             padding: 1rem;
             border-radius: 0;
         }
@@ -164,22 +123,22 @@
         width: 100%;
         display: flex;
         margin: 0.25rem 0;
+        color: $other-color;
         flex-direction: column;
         align-items: flex-start;
-        color: rgb(179, 182, 182);
     }
 
     &__input {
         width: 100%;
         margin: 4px 0;
         padding: 12px 0;
-        padding-left: 4px;
+        padding-left: 8px;
         border-radius: 20px;
-        border: 0.1px solid grey;
+        border: 0.1px solid $button-color;
     }
 
     &__input:active {
-        border: 0.5px solid rgb(146, 148, 150);
+        border: 0.5px solid $footer-color;
     }
 
     &__textarea {
@@ -188,23 +147,23 @@
         margin: 4px 0;
         height: 120px;
         padding: 12px 0;
-        padding-left: 4px;
+        padding-left: 8px;
         border-radius: 20px;
-        border: 0.1px solid grey;
+        border: 0.1px solid $button-color;
     }
 
     &__textarea:active {
-        border: 0.2px solid darkgrey;
+        border: 0.2px solid $footer-color;
     }
 
     &__button {
-        color: #fff;
         padding: 12px 0;
         margin-top: 1rem;
         font-size: 1.2rem;
         border-radius: 20px;
-        border: 0.5px solid grey;
-        background-color: #A6B1E1;
+        color: $white-color;
+        border: 0.5px transparent;
+        background-color: $button-color;
         box-shadow: rgba(0, 0, 0, 0.3) 0px 3px 8px;
     }
 
@@ -233,8 +192,8 @@
 
         @include desktop {
             display: flex;
-            margin: 2rem;
-            justify-content: flex-start;
+            width: 600px;
+            margin: 2rem 0;
         }
     }
 
@@ -242,19 +201,15 @@
     &__info{
         margin: 1rem;
         width: 225px;
-        color: white;
         cursor: pointer;
         padding: 14px 0;
         font-size: 1.2rem;
         position: relative;
         border-radius: 20px;
-        border: 0.5px solid rgb(112, 112, 112);
+        color: $white-color;
+        border: 0.5px transparent;
+        background-color: $button-color;
         box-shadow: rgba(0, 0, 0, 0.3) 0px 3px 8px;
-        background-color: #A6B1E1;
-
-        @include desktop {
-            width: 200px;
-        }
     }
 
 

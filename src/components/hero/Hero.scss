@@ -1,0 +1,51 @@
+@use '../../styles/_partials/mixins' as *;
+@use '../../styles/_partials/variables';
+@use '../../styles/_partials/reset';
+
+.hero {
+    width: 100%;
+    display: flex;
+    max-width: 1440px;
+    box-sizing: border-box;
+    background-image: linear-gradient(rgba(0,0,0,0.2),rgba(0,0,0,0.2)),url('../../assets/image/morgan-codes-wallpaper.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    align-items: center;
+    mix-blend-mode: overlay;
+    flex-direction: column;
+
+    &__wrap {
+        width: 100%;
+        height: 65vh;
+        display: flex;
+        padding: 1rem;
+        max-width: 1080px;
+        position: relative;
+        box-sizing: border-box;
+    }
+
+    &__header {
+        left: 35%;
+        bottom: 0;
+        width: 200px;
+        font-weight: 700;
+        font-size: 1.5rem;
+        text-align: center;
+        position: absolute;
+        color: $white-color;
+        text-shadow: 2px 2px 5px #000000;
+        transform: translate(-50%, -50%);
+
+        @include tablet {
+            left: 20%;
+            width: 270px;
+            font-size: 2rem;
+        }
+
+        @include desktop {
+            width: 420px;
+            font-size: 3rem;
+        }
+    }
+}

@@ -1,5 +1,4 @@
 import './Dropdown.scss';
-import { Link } from 'react-router-dom';
 import { BsBriefcase, BsFilePerson } from 'react-icons/bs';
 import { BiMessageAltEdit } from 'react-icons/bi';
 import { Twirl as Hamburger } from 'hamburger-react';
@@ -14,22 +13,22 @@ function Dropdown({ isOpen, setOpen }) {
                 <Hamburger color='white' size={20} toggled={isOpen} toggle={setOpen} />
             </div>
             <li className='dropdown__items' onClick={() => toggler(!isOpen)}>
-                <Link className='dropdown__link' to="/about">
+                <a className='dropdown__link' href="#about">
                     <BsFilePerson/>
                     About
-                </Link>
+                </a>
             </li>
             <li className='dropdown__items' onClick={() => toggler(!isOpen)}>
-                <Link className='dropdown__link' to="/contact">
+                <a className='dropdown__link' href="#contact">
                     <BiMessageAltEdit/>
                     Contact
-                </Link>
+                </a>
             </li>
             <li className='dropdown__items' onClick={() => toggler(!isOpen)}>
-                <Link className='dropdown__link' to="/">
+                <a className='dropdown__link' href="#work">
                     <BsBriefcase/>
                     Work
-                </Link>
+                </a>
             </li>
         </ul>
     </section>

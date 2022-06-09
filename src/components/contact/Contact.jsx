@@ -2,7 +2,6 @@ import './Contact.scss';
 import axios from 'axios';
 import { useState } from 'react';
 import emailjs from 'emailjs-com'
-import { useNavigate } from 'react-router-dom';
 
 import Resume from "../../assets/Icons/resume.png";
 import FileDownload from 'js-file-download';
@@ -12,7 +11,6 @@ import LinkedIn from '../../assets/Icons/linkedin-circled.svg';
 
 
 function Contact() {
-  const navigate = useNavigate();
 
   const [ name, setName ] = useState('');
   const [ email, setEmail ] = useState('');
@@ -41,20 +39,16 @@ function Contact() {
       }, (error) => {
           console.log(error.text);
       });
-    navigate("/");
   };
 
   return (
-    <section className="contact">
+    <section className="contact" id='contact'>
       <section className="contact__wrap">
         <article className="contact__body">
           <div className="contact__text">
-            <h1 className="contact__page-heading">
+            <h2 className="contact__page-heading">
               Connect With Me 
-            </h1>
-            <p className="contact__words">
-              Click the link bellow or fill out the form to send me a message
-            </p>
+            </h2>
           </div>
           <div className="contact__socials">
             <button className='contact__info' onClick={() => window.open('https://github.com/alexandermarcell')}>
@@ -86,17 +80,17 @@ function Contact() {
             <label className="contact__label">Name:
               <input type="name" placeholder='Name' 
               className="contact__input" name='name' value={name}
-              onChange={(e) => setName(e.target.value)}/>
+              onChange={(e) => setName(e.target.value)} required/>
             </label>
             <label className="contact__label">Email:
               <input type="email" placeholder='Email' 
               className="contact__input" name='email' value={email} 
-              onChange={(e) => setEmail(e.target.value)} />
+              onChange={(e) => setEmail(e.target.value)} required/>
             </label>
             <label className="contact__label">Message:
               <textarea type="message" name='message' placeholder='Message...'  
               className='contact__textarea' value={message}
-              onChange={(e) => setMessage(e.target.value)} />
+              onChange={(e) => setMessage(e.target.value)} required/>
             </label>
             <input type='submit' className='contact__button'/>
           </div>
