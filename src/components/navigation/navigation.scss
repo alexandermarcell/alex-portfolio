@@ -11,8 +11,8 @@
     flex-direction: column;
     box-sizing: border-box;
     justify-content: center;
-    border: 1px solid $black-color;
-    background-color: $black-color;
+    border: none !important;
+    background-color: rgba(0, 0, 0, 0.97);
 
     &__wrap {
         width: 100%;

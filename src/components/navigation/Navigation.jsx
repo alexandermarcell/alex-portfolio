@@ -1,7 +1,7 @@
 import './navigation.scss';
 import { useState } from 'react';
 import Dropdown from '../dropdown/Dropdown';
-import Logo from '../../assets/image/Am-logo-white.png';
+import Logo from '../assets/image/Am-logo-white.png';
 import { Twirl as Hamburger } from 'hamburger-react';
 
 const Navigation = () => {
