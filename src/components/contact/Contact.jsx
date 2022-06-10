@@ -3,11 +3,11 @@ import axios from 'axios';
 import { useState } from 'react';
 import emailjs from 'emailjs-com'
 
-import Resume from "../assets/Icons/resume.png";
+import Resume from "../../assets/Icons/resume.png";
 import FileDownload from 'js-file-download';
-import GitHub from '../assets/Icons/github.png';
-import Gmail from '../assets/Icons/gmail-logo.svg';
-import LinkedIn from '../assets/Icons/linkedin-circled.svg';
+import GitHub from '../../assets/Icons/github.png';
+import Gmail from '../../assets/Icons/gmail-logo.svg';
+import LinkedIn from '../../assets/Icons/linkedin-circled.svg';
 
 
 function Contact() {

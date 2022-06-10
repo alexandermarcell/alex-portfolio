@@ -1,18 +1,18 @@
 import './About.scss';
-import reactIcon from '../assets/Icons/react.png';
-import Sass from '../assets/Icons/sass_icon.png';
-import html from '../assets/Icons/html5.svg';
-import css from '../assets/Icons/css3.svg';
-import bootStrap from '../assets/Icons/bootstrap5.svg';
-import express from '../assets/Icons/express-js.png';
-import mongoDB from '../assets/Icons/mongodb.svg';
-import axiosLogo from "../assets/Icons/axios.svg";
-import nodejs from '../assets/Icons/node-js.svg';
-import mysql from '../assets/Icons/MySQL.svg';
-import jwt from '../assets/Icons/jwtio-json-web-token.svg';
-import javaScript from '../assets/Icons/javascript.svg';
-import reduxIcon from '../assets/Icons/redux.svg';
-import MyPic from '../assets/image/myPhoto.png';
+import reactIcon from '../../assets/Icons/react.png';
+import Sass from '../../assets/Icons/sass_icon.png';
+import html from '../../assets/Icons/html5.svg';
+import css from '../../assets/Icons/css3.svg';
+import bootStrap from '../../assets/Icons/bootstrap5.svg';
+import express from '../../assets/Icons/express-js.png';
+import mongoDB from '../../assets/Icons/mongodb.svg';
+import axiosLogo from "../../assets/Icons/axios.svg";
+import nodejs from '../../assets/Icons/node-js.svg';
+import mysql from '../../assets/Icons/MySQL.svg';
+import jwt from '../../assets/Icons/jwtio-json-web-token.svg';
+import javaScript from '../../assets/Icons/javascript.svg';
+import reduxIcon from '../../assets/Icons/redux.svg';
+import MyPic from '../../assets/image/myPhoto.png';
 
 const About = () => {
 
