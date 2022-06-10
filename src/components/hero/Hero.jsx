@@ -1,5 +1,5 @@
 import './Hero.scss';
-import heroImage from '../../assets/image/hero-image.jpg';
+import heroImage from 'https://www.alexmarcell.com/static/media/hero-image.99c4528a9c3e01972c8b.jpg';
 
 const Hero = () => {
   return (
