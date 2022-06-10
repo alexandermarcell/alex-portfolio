@@ -14,16 +14,23 @@
     }
 
     &__text {
-        top: 70%;
-        left: 7%;
+        top: 30%;
+        left: 30%;
         width: 170px;
         font-size: 1.3rem;
         position: absolute;
         color: $white-color;
 
+        @include tablet {
+            top: 30%;
+            left: 40%;
+            width: 190px;
+            font-size: 1.5rem;
+        }
+
         @include desktop {
-            top: 80%;
-            left: 22%;
+            top: 30%;
+            left: 50%;
             width: 280px;
             font-size: 2.2em;
             transform: translate(-50%, -50%);
