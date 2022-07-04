@@ -1,5 +1,3 @@
-import './App.scss';
-import Hero from './components/hero/Hero';
 import Work from './components/work/Work';
 import About from './components/about/About';
 import Footer from './components/footer/Footer';
@@ -8,9 +6,8 @@ import Navigation from './components/navigation/Navigation';
 
 function App() {
   return (
-    <div className="App">
+    <div className='w-full max-w-screen-2xl mx-auto p-1 box-border'>
       <Navigation />
-      <Hero />
       <About />
       <Work />
       <Contact />

@@ -1,36 +1,35 @@
-import './navigation.scss';
 import { useState } from 'react';
 import Dropdown from '../dropdown/Dropdown';
-import Logo from '../../assets/image/Am-logo-white.png';
+import Logo from '../../assets/image/AM-logo.png';
 import { Twirl as Hamburger } from 'hamburger-react';
 
 const Navigation = () => {
     const [isOpen, setOpen] = useState(false);
-    
     const toggler = () => {setOpen(!isOpen)};
 
   return (
-    <div className='nav'>
-        <div className="nav__wrap">
-            <img className='nav__logo' src={Logo} alt="" />
-            <div className="nav__nav-content">
-                <div className="nav__handhelds">
-                    <Hamburger className='nav__hamburger' color='white' size={20} toggled={isOpen} toggle={setOpen} />
+    <div className='w-full h-16 flex flex-col px-2 items-center justify-center box-border'>
+        <div className="w-full relative flex max-w-5xl items-center justify-between">
+            <img className='w-full max-w-[225px]' src={Logo} alt="" />
+            <div className="w-full flex box-border justify-end">
+                <div className="w-full flex relative justify-end lg:hidden">
+                    <Hamburger size={20} toggled={isOpen} toggle={setOpen} />
                     {isOpen && 
-                    <div className='nav__window' onClick={() => toggler(!isOpen)}>
+                    <div className='w-screen h-screen -top-3 -right-3 z-50 absolute bg-blue-900' 
+                    onClick={() => toggler(!isOpen)}>
                         <Dropdown setOpen={setOpen} isOpen={isOpen} />
                     </div>}
                 </div>
-                <div className="nav__desktop-view">
-                    <ul className='nav__links'>
-                        <li className='nav__items' >
-                            <a className='nav__ref' href="/">About</a>
+                <div className='hidden lg:flex justify-end'>
+                    <ul className='w-full flex'>
+                        <li className='cursor-pointer text-base italic' >
+                            <a className='no-underline list-none' href="/">About</a>
                         </li>
-                        <li className='nav__items' >
-                            <a className='nav__ref' href="#contact">Contact</a>
+                        <li className='cursor-pointer text-base  italic ml-8' >
+                            <a className='no-underline list-none' href="#contact">Contact</a>
                         </li>
-                        <li className='nav__items' >
-                            <a className='nav__ref' href="#work">Work</a>
+                        <li className='cursor-pointer text-base italic ml-8' >
+                            <a className='no-underline list-none' href="#work">Work</a>
                         </li>
                     </ul>
                 </div>
