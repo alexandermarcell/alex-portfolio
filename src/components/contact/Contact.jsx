@@ -34,9 +34,7 @@ function Contact() {
       .then((result) => {
           console.log(result.text);
           window.location.href = "#about"
-          setName('');
-          sendEmail('');
-          setMessage('');
+          e.target.reset();
       }, (error) => {
           console.log(error.text);
       });
