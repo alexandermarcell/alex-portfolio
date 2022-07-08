@@ -2,14 +2,12 @@ import axios from 'axios';
 import { AiOutlineFilePdf, AiOutlineMail } from 'react-icons/ai';
 import { FiGithub, FiLinkedin } from 'react-icons/fi';
 import { useState } from 'react';
-import { useNavigate } from 'react-router-dom';
 import emailjs from 'emailjs-com'
 
 import FileDownload from 'js-file-download';
 
 
 function Contact() {
-  const navigate = useNavigate();
   const [ name, setName ] = useState('');
   const [ email, setEmail ] = useState('');
   const [ message, setMessage ] = useState('');
@@ -34,7 +32,8 @@ function Contact() {
     emailjs.sendForm('service_cshbo9b', 'template_b3181om', e.target, 'vh3TBm5FAk2l0lQFv')
       .then((result) => {
           console.log(result.text);
-          navigate("/");
+          location.reload();
+          window.location.reload();
       }, (error) => {
           console.log(error.text);
       });
