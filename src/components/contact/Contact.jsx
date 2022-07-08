@@ -33,7 +33,7 @@ function Contact() {
     emailjs.sendForm('service_cshbo9b', 'template_b3181om', e.target, 'vh3TBm5FAk2l0lQFv')
       .then((result) => {
           console.log(result.text);
-          window.location.href = "#hero"
+          window.location.href = "#about"
       }, (error) => {
           console.log(error.text);
       });
