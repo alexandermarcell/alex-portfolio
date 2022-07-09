@@ -28,7 +28,7 @@ const About = () => {
             className='w-full lg:w-1/2 flex p-4 max-w-md mb-4 lg:max-w-sm rounded-3xl' 
             alt='me in bio' 
             />
-            <div className="w-full flex flex-col items-center lg:w-1/2 lg:justify-between lg:ml-2 box-border">
+            <div className="w-full flex flex-col items-center px-2 lg:w-1/2 lg:justify-between lg:ml-2 box-border">
                 <p className='w-full py-2 max-w-lg box-border text-lg'>
                     I'm a Full-Stack Web Developer residing in NYC.
                     My primary stack currently focuses on JavaScript, React, and currently learning Redux. 
